@@ -281,7 +281,7 @@ curl http://<NGINX_EXTERNAL_IP>/api/employees/1
 curl http://<NGINX_EXTERNAL_IP>/api/info
 ```
 
-## 💰 FinOps Considerations
+## FinOps Considerations
 
 ### Resource Requests and Limits
 
@@ -370,7 +370,7 @@ nagp/
 
 ---
 
-## 🧹 Cleanup
+## Cleanup
 
 To delete all resources and avoid additional costs:
 delete AKS cluster entirely
@@ -379,7 +379,7 @@ delete AKS cluster entirely
 
 ---
 
-## 📝 Notes
+## Notes
 
 - Replace `YOUR_DOCKERHUB_USERNAME` with your actual Docker Hub username
 - Replace `YOUR_USERNAME` with your GitHub username
