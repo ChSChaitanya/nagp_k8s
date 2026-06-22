@@ -28,6 +28,7 @@ This project implements a multi-tier architecture consisting of a Python Flask A
 | **Code Repository** | `https://github.com/ChSChaitanya/nagp_k8s` |
 | **Docker Hub Image** | `https://hub.docker.com/repository/docker/y6bt250/nagp-service-api` |
 | **Service API URL** | `http://40.91.80.6/api/employees` |
+| **Screen Recording**| `https://nagarro-my.sharepoint.com/:v:/r/personal/chaganty_chaitanya_nagarro_com/Documents/Desktop/nagp_2026_kubernetes_home_assignment.mp4?csf=1&web=1&e=7pJTk4` |
 
 ---
 
