@@ -316,7 +316,6 @@ curl http://<NGINX_EXTERNAL_IP>/api/info
    kind: ResourceQuota
    metadata:
      name: nagp-quota
-     namespace: nagp
    spec:
      hard:
        requests.cpu: "2"
