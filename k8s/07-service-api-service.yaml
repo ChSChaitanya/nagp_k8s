@@ -1,0 +1,18 @@
+# Service API ClusterIP Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-api
+  labels:
+    app: nagp-assignment
+    tier: api
+spec:
+  type: ClusterIP
+  selector:
+    app: service-api
+    tier: api
+  ports:
+    - port: 80
+      targetPort: 5000
+      protocol: TCP
+      name: http

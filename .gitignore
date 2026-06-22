@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.env
+.venv/
+
+# IDE
+.idea/
+.vscode/settings.json
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Logs
+*.log
+
+# Local development
+.env.local
+*.local
+
+# Docker
+*.tar
+
+# Secrets (never commit actual secrets)
+*-secret.yaml.local

@@ -1,0 +1,45 @@
+# Horizontal Pod Autoscaler for Service API
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: service-api-hpa
+  labels:
+    app: nagp-assignment
+    tier: api
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-api
+  minReplicas: 4    # Minimum 4 pods 
+  maxReplicas: 10   # Maximum 10 pods for cost control
+  metrics:
+    # Scale based on CPU utilization
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 70  # Scale up when CPU > 70%
+    # Scale based on memory utilization
+    - type: Resource
+      resource:
+        name: memory
+        target:
+          type: Utilization
+          averageUtilization: 80  # Scale up when memory > 80%
+  behavior:
+    # Scale down configuration
+    scaleDown:
+      stabilizationWindowSeconds: 300  # Wait 5 mins before scaling down
+      policies:
+        - type: Pods
+          value: 1
+          periodSeconds: 60  # Remove 1 pod per minute
+    # Scale up configuration
+    scaleUp:
+      stabilizationWindowSeconds: 0  # Scale up immediately when needed
+      policies:
+        - type: Pods
+          value: 2
+          periodSeconds: 60  # Add up to 2 pods per minute
