@@ -374,7 +374,7 @@ nagp/
 
 To delete all resources and avoid additional costs:
 delete AKS cluster entirely
-# az aks delete --resource-group <RESOURCE_GROUP> --name <AKS_CLUSTER_NAME> --yes --no-wait
+### az aks delete --resource-group <RESOURCE_GROUP> --name <AKS_CLUSTER_NAME> --yes --no-wait
 ```
 
 ---
